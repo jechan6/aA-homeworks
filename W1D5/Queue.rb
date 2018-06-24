@@ -1,10 +1,11 @@
 class Queue
+
   def initialize
     @queue = []
   end
 
   def enqueue(el)
-    @queue.push(el)
+    @queue << el
   end
 
   def dequeue
@@ -15,4 +16,6 @@ class Queue
     @queue.first
   end
 
+  private
+  attr_accessor :queue
 end

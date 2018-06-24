@@ -14,21 +14,21 @@ class Map
   end
 
   def get(key)
-    (0...@map.length).each do |idx|
-      return @map[idx].last if @map[idx].first == key
-
+    @map.each do |el|
+      return el.last if el.first == key
     end
+    nil
   end
 
   def delete(key)
-    (0...@map.length).each do |idx|
-      return @map.delete_at(idx) if @map[idx].first == key
+    @map.each do |el|
+      return @map.delete(el) if el.first == key
     end
   end
 
   def show
-    (0...@map.length).each do |idx|
-      puts @map[idx]
+    @map.each do |el|
+      p el
     end
   end
 
