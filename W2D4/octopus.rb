@@ -37,6 +37,16 @@ def dominant_octopus(arr)
   sort_octopuses(arr)[-1]
 end 
 
+def clever_octopus(arr)
+  max = ""
+  arr.each do |el|
+    if el.length > max.length 
+      max = el 
+    end 
+  end 
+  max
+end 
+
 def slow_dance(dir, arr)
   arr.each_index do |idx|
     if arr[idx] == dir 
@@ -48,4 +58,3 @@ end
 def fast_dance(dir, hash_tiles)
   return hash_tiles[dir]
 end 
-hash_tiles = {"up" : 0, "right-up": 1, "right": 2, "right-down" : 3, "down" : 4, "left-down" : 5, "left" : 6, "left-down": 7}
