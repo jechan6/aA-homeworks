@@ -10,4 +10,6 @@ document.addEventListener('DOMContentLoaded',() => {
   // window.receiveSearchGiphys = receiveSearchGiphys;
   window.fetchSearchGiphys = fetchSearchGiphys;
   window.store = store;
+  const root = document.getElementById('root');
+  ReactDOM.render(<Root store={store}/>, root);
 });
